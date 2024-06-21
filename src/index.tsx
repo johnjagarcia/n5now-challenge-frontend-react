@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import CreateProduct from "./routes/create-product";
+import CreateProduct from "./routes/CreateProduct";
 import Home from "./routes/home";
 import Root from "./routes/root";
 

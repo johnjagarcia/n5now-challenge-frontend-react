@@ -2,7 +2,7 @@ import React from "react";
 import CurrencyFormat from "react-currency-format";
 import { CartItem } from "../../models/cartItem";
 
-const CartProduct = ({ cartItem }: { cartItem: CartItem }) => {
+const CartProductItem = ({ cartItem }: { cartItem: CartItem }) => {
   return (
     <div className="shelf-item">
       <div className="shelf-item__details">
@@ -24,4 +24,4 @@ const CartProduct = ({ cartItem }: { cartItem: CartItem }) => {
   );
 };
 
-export default CartProduct;
+export default CartProductItem;

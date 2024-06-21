@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppSelector } from "../../hooks";
 import { RootState } from "../../store";
-import ProductCard from "../product/product";
+import ProductCard from "./ProductCard";
 
 const ProductList = () => {
   const products = useAppSelector((state: RootState) => state.cart.products);

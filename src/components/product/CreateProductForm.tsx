@@ -11,7 +11,7 @@ type Inputs = {
   amount: number;
 };
 
-export default function ProductForm() {
+export default function CreateProductForm() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 

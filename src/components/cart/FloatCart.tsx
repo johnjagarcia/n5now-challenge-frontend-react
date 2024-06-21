@@ -8,7 +8,7 @@ import {
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { RootState } from "../../store";
 import "../../styles/cart.scss";
-import CartProduct from "./cartProduct";
+import CartProductItem from "./CartItem";
 
 const FloatCart = () => {
   const dispatch = useAppDispatch();
@@ -35,7 +35,7 @@ const FloatCart = () => {
   }
 
   const products = cartItems.map((ci) => {
-    return <CartProduct key={ci.id} cartItem={ci} />;
+    return <CartProductItem key={ci.id} cartItem={ci} />;
   });
 
   const proceedToCheckout = () => {

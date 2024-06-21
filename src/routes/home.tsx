@@ -1,6 +1,6 @@
 import React from "react";
-import FloatCart from "../components/cart";
-import ProductList from "../components/product-list";
+import FloatCart from "../components/cart/FloatCart";
+import ProductList from "../components/product/ProductList";
 
 function Home() {
   return (
