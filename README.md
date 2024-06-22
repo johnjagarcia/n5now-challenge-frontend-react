@@ -10,7 +10,7 @@ The React application in Typescript is configured with ESlint, Jest, and Sass.
     > git clone https://github.com/nnfunny/typescript-react-template.git
 ```
 
-2. Instalar dependencias (Usar v14 de NODE):
+2. Instalar dependencias (Usar v14 de NODE IMPORTANTE!!):
 
 ```bash
     > yarn
