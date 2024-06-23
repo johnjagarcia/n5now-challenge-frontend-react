@@ -14,6 +14,8 @@ const ProductCard = ({ product }: { product: Product }) => {
   };
 
   const handleOnDecrease = () => {
+    if (itemQty <= 0) return;
+
     setItemQty(itemQty - 1);
   };
 
@@ -24,7 +26,9 @@ const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <div className="item">
-      <p className="item__title">{product.name}</p>
+      <p className="item__title" data-testid="paragraph-product-name">
+        {product.name}
+      </p>
       <div className="item__price">
         <div className="val">
           <CurrencyFormat

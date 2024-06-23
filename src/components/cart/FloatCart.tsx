@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import CurrencyFormat from "react-currency-format";
-import {
-  clearCart,
-  purchase,
-  selectPriceTotal,
-} from "../../features/cart/cartSlice";
+import { clearCart, purchase } from "../../features/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { RootState } from "../../store";
+import { selectTotalPrice } from "../../store/selectors";
 import "../../styles/cart.scss";
 import CartProductItem from "./CartItem";
 
@@ -15,7 +12,7 @@ const FloatCart = () => {
 
   const cartItems = useAppSelector((state: RootState) => state.cart.items);
   const priceTotal = useAppSelector((state: RootState) =>
-    selectPriceTotal(state)
+    selectTotalPrice(state)
   );
 
   const [cartIsOpen, setCartIsOpen] = useState(false);

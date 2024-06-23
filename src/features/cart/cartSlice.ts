@@ -59,15 +59,9 @@ const cartSlice = createSlice({
       alert("Producto creado de forma correcta!");
     },
   },
-  selectors: {
-    selectPriceTotal: (state) =>
-      state.items.reduce((pv, acc) => pv + acc.quantity * acc.price, 0),
-  },
 });
 
 export const { addItemToCart, clearCart, purchase, createProduct } =
   cartSlice.actions;
-
-export const { selectPriceTotal } = cartSlice.selectors;
 
 export default cartSlice.reducer;

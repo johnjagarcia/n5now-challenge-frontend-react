@@ -24,7 +24,7 @@ export default function CreateProductForm() {
 
   return (
     <div className="form">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} aria-label="form">
         <input
           placeholder="Nombre"
           aria-label="name"
@@ -42,7 +42,9 @@ export default function CreateProductForm() {
           type="number"
           {...register("amount", { required: true })}
         />
-        <input type="submit" className="btn" />
+        <button type="submit" className="btn" name="save">
+          Guardar
+        </button>
         <button
           className="btn"
           onClick={() => {
