@@ -2,9 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { CartState } from "../../models/cartState";
 import data from "../../data/products.json";
 
+const persistedItems = localStorage.getItem("cartItems");
+
 const initialState: CartState = {
   products: data.products,
-  items: [],
+  items: persistedItems ? JSON.parse(persistedItems) : [],
 };
 
 const cartSlice = createSlice({
@@ -25,9 +27,12 @@ const cartSlice = createSlice({
       } else {
         state.items.push(product);
       }
+
+      localStorage.setItem("cartItems", JSON.stringify(state.items));
     },
     clearCart: (state) => {
       state.items = [];
+      localStorage.removeItem("cartItems");
     },
     purchase: (state) => {
       state.items.forEach((element) => {
@@ -37,6 +42,8 @@ const cartSlice = createSlice({
         }
       });
       state.items = [];
+      localStorage.removeItem("cartItems");
+
       alert("Compra realizada con éxito!");
     },
     createProduct: (state, action) => {
