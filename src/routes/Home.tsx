@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from "react";
 import FloatCart from "../components/cart/FloatCart";
 import ProductList from "../components/product/ProductList";

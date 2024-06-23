@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useState } from "react";
 import CurrencyFormat from "react-currency-format";
 import { addItemToCart } from "../../features/cart/cartSlice";

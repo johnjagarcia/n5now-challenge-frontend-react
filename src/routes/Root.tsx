@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from "react";
 import { Provider } from "react-redux";
 import { Link, Outlet } from "react-router-dom";
