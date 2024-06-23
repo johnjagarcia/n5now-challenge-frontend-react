@@ -285,6 +285,13 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  .float-cart__close-btn {
+    left: auto;
+    right: 0;
+  }
+}
+
 .float-cart__content {
   height: 100%;
   overflow-y: scroll;
